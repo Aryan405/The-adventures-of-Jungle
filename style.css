@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: red;
+    overflow: hidden;
+}
+ 
+.gamecontainer{
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: 100vh;
+}
+
+.cycle{
+    background-image: url(hero-removebg-preview.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 163px;
+    height: 176px;
+    position: absolute;
+    bottom: 0;
+    left: 52px;
+}
+
+.obstacle{
+    background-image: url(obstacle-removebg-preview.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 180px;
+    height: 190px;
+    position: absolute;
+    left: 45vw;
+    bottom: 0;
+}
+
+.gameover{
+    visibility: visible;
+    position: relative;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 35px;
+    top: 20px;
+    font-weight: bolder;
+}
+
+#scorecont{
+    position: absolute;
+    right: 75px;
+    border: 2px solid black;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 10px;
+    font-weight: bolder;
+    color: yellow;
+    top: 20px ;
+}
+.animatecycle{
+    animation: cycle 0.6s linear;
+}
+
+.obstacleani{
+    animation: obstacleani 5s linear infinite;
+}
+
+@keyframes cycle{
+    0%{
+bottom: 0;
+    }
+    50%{
+bottom: 330px;
+    }
+    100%{
+bottom: 0;
+    }
+}
+
+@keyframes obstacleani{
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -10vw;
+    }
+}
